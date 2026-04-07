@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/31 12:58:21 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 14:18:46 by jmcgrane         ###   ########.fr       */
+/*   Created: 2026/04/07 13:05:51 by jmcgrane          #+#    #+#             */
+/*   Updated: 2026/04/07 13:58:28 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-class Zombie {
-		
-private:
-
-	std::string name;
-
-public:
-
-	Zombie(std::string s){
-		name = s;
-	}
-	~Zombie();
-	std::string getName() const {
-		return name;
-	}
-	void announce(void){ 
-		std::cout << getName() << ": BraiiiiiiinnnzzzZ...\n";
-	}
-};
-
-void	randomChump(std::string name);
-Zombie* newZombie(std::string zombieName);
+int main(void)
+{
+	Zombie *hoard;
+	hoard = zombieHoard(3, "geff");
+	delete[] hoard;
+	return 0;
+}

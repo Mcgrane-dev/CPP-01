@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHoard.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/31 12:58:21 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 14:18:46 by jmcgrane         ###   ########.fr       */
+/*   Created: 2026/04/07 13:06:46 by jmcgrane          #+#    #+#             */
+/*   Updated: 2026/04/07 13:30:35 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-class Zombie {
+Zombie* zombieHoard(int n, std::string name)
+{
+	Zombie* hoard = new Zombie[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+		hoard[i].setNameandN(i, name);
+		hoard[i].announce();
 		
-private:
-
-	std::string name;
-
-public:
-
-	Zombie(std::string s){
-		name = s;
 	}
-	~Zombie();
-	std::string getName() const {
-		return name;
-	}
-	void announce(void){ 
-		std::cout << getName() << ": BraiiiiiiinnnzzzZ...\n";
-	}
-};
-
-void	randomChump(std::string name);
-Zombie* newZombie(std::string zombieName);
+	return hoard;
+}

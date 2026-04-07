@@ -5,33 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/31 12:58:21 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 14:18:46 by jmcgrane         ###   ########.fr       */
+/*   Created: 2026/04/07 13:06:39 by jmcgrane          #+#    #+#             */
+/*   Updated: 2026/04/07 13:56:42 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-class Zombie {
-		
-private:
-
+class Zombie{
+	private:
+	
 	std::string name;
+	int			n;
 
-public:
+	public:
 
-	Zombie(std::string s){
-		name = s;
-	}
+	Zombie(){}
 	~Zombie();
-	std::string getName() const {
-		return name;
+
+	void setNameandN(int n, std::string s){
+		this->name = s;
+		this->n = n;
 	}
-	void announce(void){ 
-		std::cout << getName() << ": BraiiiiiiinnnzzzZ...\n";
+	void announce(){
+		std::cout << name << ": brainnnnzzzZ\n";
 	}
 };
 
-void	randomChump(std::string name);
-Zombie* newZombie(std::string zombieName);
+Zombie* zombieHoard(int n, std::string name);
