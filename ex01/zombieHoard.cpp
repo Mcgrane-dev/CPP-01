@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 13:06:46 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 13:30:35 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/15 12:15:57 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ Zombie* zombieHoard(int n, std::string name)
 	{
 		hoard[i].setNameandN(i, name);
 		hoard[i].announce();
-		
 	}
 	return hoard;
 }
