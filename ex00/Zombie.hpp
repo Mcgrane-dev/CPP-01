@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 12:58:21 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 15:55:55 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/15 12:01:07 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 		name = s;
 	}
 	~Zombie();
+
 	std::string getName() const {
 		return name;
 	}
