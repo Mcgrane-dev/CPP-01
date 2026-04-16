@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 13:00:40 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/16 14:00:55 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/16 15:02:18 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ private:
 public:
 
 	Weapon(std::string type);
-
 	void setType(std::string type);
-
 	const std::string& getType() const;
 };
 
