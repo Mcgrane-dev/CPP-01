@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 13:06:39 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/07 15:55:44 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/16 12:15:33 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Zombie{
 	private:
 	
-	std::string name;
 	int			n;
+	std::string name;
 
 	public:
 

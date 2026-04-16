@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 13:00:40 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/15 15:37:22 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/16 14:00:55 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,11 @@ private:
 
 public:
 
-	Weapon(std::string type): type(type){
-	}
-	
-	void setType(std::string type){
-		this->type = type;
-	}
+	Weapon(std::string type);
 
-	const std::string& getType() const {
-		return type;
-	}
+	void setType(std::string type);
+
+	const std::string& getType() const;
 };
 
 #endif

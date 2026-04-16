@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 13:00:14 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/15 15:23:08 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/16 14:02:57 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,9 @@ class HumanA{
 	
 	public:
 
-	HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon){
-	}
+	HumanA(std::string name, Weapon &weapon);
 
-	void attack(){
-		std::cout << name << " attacks with their " << weapon.getType();
-	}
+	void attack();
 };
 
 #endif
