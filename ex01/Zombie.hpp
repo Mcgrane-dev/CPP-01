@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 13:06:39 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/16 12:15:33 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/04/21 12:55:02 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,11 @@ class Zombie{
 
 	public:
 
-	Zombie(){}
+	Zombie();
 	~Zombie();
 
-	void setNameandN(int n, std::string s){
-		this->n = n;
-		this->name = s;
-	}
-
-	void announce(){
-		std::cout << name << ": brainnnnzzzZ\n";
-	}
+	void setNameandN(int n, std::string name);
+	void announce();
 };
 
 Zombie* zombieHoard(int n, std::string name);
