@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:13:16 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/04/22 15:22:55 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:05:42 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ int main(int ac, char **av)
 
 	if(!outfile.is_open())
 	{
-		std::cout << "Error file not found\n";
+		std::cout << "Error: Cannot create output file\n";
 		return 1;
 	}
 
 	std::string line;
-	while(std::getline(infile, line))
+	while(std::getline(infile, line)) //input stream and string
 	{
-		size_t pos = line.find(s1);
-		while(pos != std::string::npos)
+		size_t pos = line.find(s1); //line() returns index of starting position
+		while(pos != std::string::npos) //npos is max value of size_t
 		{
 			line.erase(pos, s1.length());
 			line.insert(pos, s2);
