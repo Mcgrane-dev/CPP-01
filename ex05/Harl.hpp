@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 14:06:37 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/05/01 15:26:43 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/05/01 15:52:38 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define HARL_HPP
 
 #include <iostream>
+#include <string>
 
 class Harl{
 	private:
