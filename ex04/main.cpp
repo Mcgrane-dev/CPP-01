@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:13:16 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/05/01 13:05:42 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/05/06 12:23:33 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ int main(int ac, char **av)
 
 	std::string s1 = av[2];
 	std::string s2 = av[3];
+
+	if (s1.empty())
+    {
+        std::cout << "Error: s1 cannot be empty\n";
+        return (1);
+    }
+	
 	std::ifstream infile(av[1]);
 
 	if(!infile.is_open())
@@ -42,10 +49,10 @@ int main(int ac, char **av)
 	}
 
 	std::string line;
-	while(std::getline(infile, line)) //input stream and string
+	while(std::getline(infile, line))
 	{
-		size_t pos = line.find(s1); //line() returns index of starting position
-		while(pos != std::string::npos) //npos is max value of size_t
+		size_t pos = line.find(s1);
+		while(pos != std::string::npos)
 		{
 			line.erase(pos, s1.length());
 			line.insert(pos, s2);
